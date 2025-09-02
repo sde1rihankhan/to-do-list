@@ -18,6 +18,7 @@ const Form = ({ setTodos, todos, id, setId }) => {
           id: Math.random(),
           title,
           description,
+          complete: false,
         };
         setTodos([...todos, obj]);
       }
