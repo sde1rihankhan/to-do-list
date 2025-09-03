@@ -73,11 +73,6 @@ const Form = ({ setTodos, todos, id, setId }) => {
           )}
         </div>
       </form>
-      {/* <div className=" flex justify-evenly mb-10">
-        <button>All</button>
-        <button>Panding</button>
-        <button>Complete</button>
-      </div> */}
     </>
   );
 };

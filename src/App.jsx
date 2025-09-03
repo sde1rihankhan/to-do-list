@@ -3,31 +3,11 @@ import Form from "./Form";
 import Todos from "./Todos";
 
 const App = () => {
-  const [todos, setTodos] = useState([
-    // {
-    //   id: 1,
-    //   title: "this is todo list",
-    //   description: "hjrgefydgvh",
-    // },
-    // {
-    //   id: 2,
-    //   title: "this is todo list2",
-    //   description: "hjrgefydgvh2",
-    // },
-    // {
-    //   id: 3,
-    //   title: "this is todo list3",
-    //   description: "hjrgefydgvh3",
-    // },
-  ]);
+  const [todos, setTodos] = useState([]);
 
   const [completeTodos, setCompletedTodos] = useState([]);
   const [deletedTodos, setDeletedTodos] = useState([]);
   const [showDeleted, setShowDeleted] = useState(false);
-
-  // const pendingTodos = todos.filter(
-  //     (todo) => !completeTodos.find((c) => c.id === todo.id)
-  //   );
 
   const handleDelete = (id) => {
     const deletedItem = todos.find((todo) => todo.id === id);
@@ -56,10 +36,6 @@ const App = () => {
   };
 
   const [id, setId] = useState("");
-
-  // const deleteTodo = (id) => {
-  //   setTodos(todos.filter((v) => v.id != id));
-  // };
 
   return (
     <>
@@ -108,12 +84,6 @@ const App = () => {
                     <hr />
                   </li>
                 ))}
-
-                {/* {deletedTodos.map((todo) => (
-                <li key={todo.id} className="text-gray-500 m-2">
-                  {`Description     -     ${todo.description}`}
-                </li>
-              ))} */}
               </ul>
             )}
           </div>

@@ -9,7 +9,6 @@ const Todos = ({
   setId,
 }) => {
   const [filter, setFilter] = useState("pending");
-  // const [completedTodos, setCompletedTodos] = useState([]);
   const allTodos = [...todos, ...completeTodos];
 
   // Filter ke hisab se todos dikhana
@@ -23,45 +22,6 @@ const Todos = ({
         return allTodos;
     }
   };
-
-  // const mode = ()=>{
-  //   }
-  // }
-
-  // console.log(filter);
-
-  // Pending todos (jo complete nahi hain)
-  // const pendingTodos = todos.filter(
-  //   (todo) => !completedTodos.find((c) => c.id === todo.id)
-  // );
-
-  // // All todos (pending + completed, bina duplicate)
-
-  // // Checkbox click par todo ko complete karna
-  // const handleComplete = (id) => {
-  //   const todo = todos.find((t) => t.id === id);
-  //   if (!completedTodos.find((c) => c.id === id)) {
-  //     setCompletedTodos([...completedTodos, todo]); // completed me bhej do
-  //   }
-  // };
-
-  // // Completed me se delete karna
-  // // const handleDeleteFromCompleted = (id) => {
-  // //   setCompletedTodos(completedTodos.filter((t) => t.id !== id)); // complete se hatao
-  // //   handleDelete(id); // deletedTodos me bhej do (App.js wala function)
-  // // };
-
-  //  Filter ke hisab se todos dikhana
-  // const getFilteredTodos = () => {
-  //   switch (filter) {
-  //     case "pending":
-  //       return pendingTodos;
-  //     case "completed":
-  //       return completedTodos;
-  //     default:
-  //       return allTodos;
-  //   }
-  // };
 
   return (
     <div className="container text-center w-2/3">
@@ -146,7 +106,6 @@ const Todos = ({
           ))}
         </tbody>
       </table>
-      {/* <button></button> */}
     </div>
   );
 };
