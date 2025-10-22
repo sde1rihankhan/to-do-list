@@ -48,7 +48,7 @@ const App = () => {
             style={{ top: 55, left: 26 }}
             className={`flex bg-red-600 w-6 justify-center rounded-full absolute`}
           >
-            <p className="text-white font-bold ">{deletedTodos.length}</p>
+            <p style={{"height"}} className="text-white font-bold ">{deletedTodos.length}</p>
           </div>
 
           {showDeleted ? "Hide Deleted Todos" : "Show Deleted Todos"}
